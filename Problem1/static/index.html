@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+
+<body>
+    <h1 id="helloData"></h1>
+    <script>
+        function ajaxCall(method, url, data, destination, isHtml) {
+            var xhttp = new XMLHttpRequest();
+
+            xhttp.onload = function () {
+                if (isHtml) {
+                    document.getElementById(destination).innerHTML = this.responseText;
+                } else {
+                    document.getElementById(destination).value = this.responseText;
+                }
+            };
+
+            xhttp.open(method, url, false);
+            xhttp.setRequestHeader('content-type', 'application/x-www-form-urlencoded');
+            xhttp.send(data);
+        }
+
+        function loadData() {
+            ajaxCall('GET', '/gethello', null, 'helloData', true);
+        }
+
+        window.onload = () => {
+            loadData()
+            setInterval(loadData, 5000)
+        }
+    </script>
+</body>
+
+</html>
