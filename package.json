@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "archiver": "^7.0.1",
     "cli-chat": "^4.1.2",
     "express": "^5.1.0",
     "nodemon": "^3.1.10"
