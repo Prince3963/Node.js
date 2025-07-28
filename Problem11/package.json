@@ -1,0 +1,9 @@
+{
+  "name": "string-toolkit-adi",
+  "version": "1.0.0",
+  "description": "A small utility library for string operations",
+  "main": "app.js",
+  "keywords": ["string", "utility", "npm", "nodejs"],
+  "author": "Your Name",
+  "license": "ISC"
+}
