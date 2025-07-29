@@ -1,7 +1,9 @@
 function getResponse(message) {
     const msg = message.toLowerCase();
 
-    if (msg.includes('node')) {
+    if (msg.includes('hi')) {
+        return "Hello, you can ask me about backend tech!"
+    } else if (msg.includes('node')) {
         return "Node.js is a JavaScript runtime built on Chrome's V8 engine. It’s used to build scalable network applications.";
     } else if (msg.includes('express')) {
         return "Express.js is a minimal and flexible Node.js web application framework that provides robust features for web and mobile apps.";
