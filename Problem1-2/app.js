@@ -9,6 +9,6 @@ app.get('/gethello', (req, res) => {
     res.send('Hello NodeJS!!')
 })
 
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`)
-})
+app.listen(8000, () => {
+    console.log("Server running on http://localhost:8000");
+});
